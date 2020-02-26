@@ -1,0 +1,72 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+  height: 420px;
+  overflow: hidden;
+  width: 50%;
+  min-width: 315px;
+  max-width: 830px;
+  background: mediumseagreen;
+  border: 5px solid mediumseagreen;
+  -webkit-box-shadow: 2px 4px 21px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 4px 21px 0px rgba(0, 0, 0, 0.5);
+}
+
+.container div {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.horizontal {
+  grid-column: span 2;
+}
+
+.vertical {
+  grid-row: span 2;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+/*# sourceMappingURL=style.css.map */
